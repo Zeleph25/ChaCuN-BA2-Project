@@ -1,0 +1,24 @@
+#players {
+    -fx-spacing: 5;
+    -fx-padding: 5;
+}
+
+.player {
+    -fx-padding: 5;
+    -fx-line-spacing: 5;
+    -fx-border-radius: 4;
+    -fx-border-width: 2;
+    -fx-border-style: solid;
+    -fx-border-color: transparent;
+}
+
+.player.current {
+    -fx-border-color: slategray;
+}
+
+#player-text {
+    -fx-font-size: 17.5;
+    -fx-translate-y: -3.875;
+    -fx-text-alignment: center;
+}
+

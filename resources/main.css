@@ -1,0 +1,99 @@
+#label-title {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+}
+
+#label {
+    -fx-font-size: 36px;
+}
+
+#label-small {
+    -fx-font-size: 24px;
+}
+
+#label-game-type {
+    -fx-font-size: 24px;
+    -fx-background-color: #d3d3d3;
+    -fx-padding: 10px;
+}
+
+#error-label {
+    -fx-font-size: 36px;
+    -fx-text-fill: #FF0000;
+}
+
+#input-field {
+    -fx-font-size: 24px;
+    -fx-min-width: 300px;
+    -fx-pref-height: 60px;
+}
+
+.button {
+    -fx-font-size: 24px;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 60px;
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-opacity: 0.8;
+}
+
+.button:hover {
+    -fx-opacity: 0.5;
+}
+
+.button:pressed {
+    -fx-opacity: 1;
+}
+
+.button:disabled {
+    -fx-opacity: 0.25;
+}
+
+#green-button {
+    -fx-background-color: #00FF00;
+}
+
+#blue-button {
+    -fx-background-color: #0000FF;
+    -fx-text-fill: white;
+}
+
+#red-button {
+    -fx-background-color: #FF0000;
+    -fx-text-fill: white;
+}
+
+#yellow-button {
+    -fx-background-color: #FFFF00;
+}
+
+#purple-button {
+    -fx-background-color: #800080;
+    -fx-text-fill: white;
+}
+
+#orange-button {
+    -fx-background-color: #FFA500;
+    -fx-text-fill: black;
+}
+
+#vbox {
+    -fx-padding: 40px;
+    -fx-alignment: center;
+}
+
+#hbox {
+    -fx-background-color: #D3D3D3;
+    -fx-border-color: black;
+    -fx-border-width: 1;
+}
+
+.auth-layout {
+    -fx-border-color: black;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-background-color: lightblue;
+    -fx-padding: 40px;
+    -fx-alignment: center;
+}
