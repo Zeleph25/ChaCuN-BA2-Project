@@ -46,14 +46,9 @@ Enhance ChaCuN's graphical interface by developing components for displaying the
 - **Canceled Animals**: Mark images of canceled animals to count them only once.
 
 ---
-
-## 🛠️ Details
-
-This project is mostly coded in Java, with some CSS files for the UI. It was a collaborative effort by the entire cohort. Here is our code, including additional features we implemented:
-
 ### Additional Features
 
-We added unique bonus code that enhances the game. For example:
+The entire cohort had to code this project in pairs, but it was possible to code an additional part beyond this common section, some examples of which I will provide.
 
 - **Advanced Bot Logic**: Our bot can adjust its strategy based on the game's progress, making it more challenging and fun to play against.
 - **Endgame Animation**: We implemented a dynamic endgame animation where the tiles shrink and change colors in waves, creating a suspenseful effect. The final screen displays the winner's score and color, or a multicolored screen if there are multiple winners.
