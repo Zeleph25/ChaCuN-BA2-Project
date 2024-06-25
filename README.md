@@ -50,7 +50,58 @@ Enhance ChaCuN's graphical interface by developing components for displaying the
 
 The entire cohort had to code this project in pairs, but it was possible to code an additional part beyond this common section, some examples of which I will provide.
 
-- **Advanced Bot Logic**: Our bot can adjust its strategy based on the game's progress, making it more challenging and fun to play against.
-- **Endgame Animation**: We implemented a dynamic endgame animation where the tiles shrink and change colors in waves, creating a suspenseful effect. The final screen displays the winner's score and color, or a multicolored screen if there are multiple winners.
+## Bot
+
+The Bot makes decisions based on its difficulty level and adaptive strategy. Levels range from BABY to IMPOSSIBLE, determining the number of moves the Bot can foresee. The BABY bot plays randomly. Adaptive strategies (EARLY, MID, LATE) adjust decisions as the game progresses. The Bot evaluates free pawns and huts, board occupants, and placed tiles. Early game (EARLY) focuses on rapid expansion, while late game (LATE) optimizes points and limits opponent opportunities. This allows the Bot to play flexibly and effectively.
+
+### Key Methods
+- **play**: Executes the best action based on the game state and adaptive strategy.
+- **playRandomAction**: Plays a random action (BABY level).
+- **simulateGame**: Simulates the game over several moves to determine the best action.
+
+## Endgame Animation
+
+The endgame animation provides a dynamic conclusion. Board tiles shrink, allowing more to be displayed, and change colors multiple times per second in waves from the top-left to bottom-right. This movement slows down, creating suspense. Finally, the screen displays the winner's score in their color. If multiple players win, the screen becomes multicolored.
+
+## Last Move Highlight
+
+This component highlights the last action and its impact on the board. Visible only during the game, it helps track actions when the board becomes large. A specific class was created to simplify the message board for this feature.
+
+## JSON Parser
+
+We reused a JSON parser written in the first semester to implement the next two extensions, as they return JSON strings. Java does not have a built-in JSON parser.
+
+The parser includes:
+- **JSONValue**: The base of the parser, containing a string value.
+- **JSONArray**: Extends JSONValue, representing a list of JSONValues.
+- **JSONObject**: Extends JSONValue, representing a map with string keys and JSONValue values.
+- **JSONUtils**: Contains utility methods for the parser.
+- **JSONParser**: Reads/writes JSON to files.
+
+## Remote Play
+
+To implement remote play, we used a Realtime Database. This choice made connecting to a game easier and added features on top of remote play, including:
+- Rejoining a game if accidentally disconnected.
+- Replacing a player with a bot if they leave the game.
+
+We used HTTPS get, put, and delete requests via a class named `Database`. These requests return `Response` objects, containing the response body and status code, simplifying response handling in our code.
+
+## Authentication
+
+We extended `Database` with an `Authentication` class to create, log in, log out, and delete accounts. An account requires a username and password, creating a unique player ID (UUID). This ID allows automatic reconnection, rejoining games, and changing the game host if necessary.
+
+## Interface
+
+We added several interfaces for user ergonomics, including scenes for:
+- General authentication (create or log in to an account).
+- Account creation and login.
+- Main menu with buttons to access other scenes.
+- Joining a game, displaying existing games with status and refresh button.
+- Creating a game, asking for a game name.
+- Displaying game rules.
+- Viewing player statistics.
+- Waiting room, where the host can set the number of cards and bot difficulty if needed.
+- Creating a game against a bot, similar to the waiting room, without database communication.
+
 
 These features add an extra layer of complexity and enjoyment to the game.
