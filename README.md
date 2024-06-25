@@ -6,7 +6,7 @@ With my project partner Antoine Baside, we coded the second semester project of 
 
 The project aims to create an electronic version of the board game "Hunters and Gatherers." ChaCuN is designed for 2 to 5 players, where the goal is to build a prehistoric landscape by placing square tiles. The parts of the landscape (forests, rivers, etc.) can be occupied by hunters, gatherers, or fishermen to earn points.
 
-# 🎮 Gameplay
+## 🎮 Gameplay
 
 Players draw a tile, place it to form a continuous landscape, and can occupy tiles with pawns or huts to score points. A game begins with a starting tile placed at the center of the play area. Players then place adjacent tiles to continue the landscape. Some tiles allow for additional plays or have special powers.
 
