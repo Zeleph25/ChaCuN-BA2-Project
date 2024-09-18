@@ -105,3 +105,5 @@ We added several interfaces for user ergonomics, including scenes for:
 
 
 These features add an extra layer of complexity and enjoyment to the game.
+
+Little Note : This project was completed during the second semester of my first year at EPFL. I prefer to leave the project as it is, to have a reference point for my skill level during this time. Please refrain from judging the quality of the code.
