@@ -1,6 +1,7 @@
 module ChaCuN {
     requires javafx.controls;
     requires java.net.http;
+    requires java.xml;
 
     exports ch.epfl.chacun;
     exports ch.epfl.chacun.gui;
